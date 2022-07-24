@@ -5,3 +5,4 @@ function personagemMorreu(dano, saude) {
     : console.log("Personagem está vivo"); // SENAO (ELSE)
     }
    personagemMorreu(9, 2)
+   
