@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+           
+            
+
+        }
+        
+        input {
+            width:50%;
+            
+            display:flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    
+
+    
+    <script>
+        
+        let texto = []
+       let res = document.getElementById('texto')
+       
+      for(let c = 1; c<=3; c++) {
+        texto.push(Number(window.prompt('digite um número')))
+        
+      }
+      // 3 pontos servem pro metódo acessar dentro do array vasculhando um por um qual é o maior e o menor
+    let min = Math.min(...texto)
+    let max = Math.max(...texto)
+      res.value = `O menor valor é ${min} e o maior valor é ${max}`
+    </script>
+</body>
+</html>

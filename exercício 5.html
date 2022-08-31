@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center; 
+            flex-direction: column;
+            
+
+        }
+        
+        input {
+            width:50%;
+            text-align:center;
+            display:flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    <input type="text" name="texto2" id="texto2">
+
+    
+    <script>
+       
+       let array = []
+       let arrayr = []
+       let texto
+       let busca
+       
+      let res = document.getElementById('texto')
+      let res2 = document.getElementById('texto2')
+       for(let c = 1; c<=3; c++) {
+        texto = Number(window.prompt('digite um número'))
+        array.push(texto)
+       }
+       res.value = `Você digitou ${array}`
+       busca = Number(window.prompt('qual número você quer buscar?'))
+       if ( array.indexOf(busca) != -1){
+            arrayr.push(busca)
+            res2.value = `O número que você digitou foi ${arrayr}`
+       }
+       else {
+            res2.value = `Não existe esse número no array`
+       }
+       
+       
+
+    </script>
+</body>
+</html>

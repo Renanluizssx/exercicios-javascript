@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center; 
+        }
+        
+        input {
+            width:50%;
+            
+            display:flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+        <input type="text" name="texto" id="texto">
+
+   
+  
+    <script>
+            let nt = 0
+            let texto = document.getElementById('texto')
+    
+            
+            
+            for (let c = 1; c<=3; c++) {
+                    n = Number(window.prompt('Digite um número'))
+
+                    if (n>nt) {
+                        nt= n
+                    }
+            }
+
+            texto.value = `O maior número é ${nt}`
+            
+    </script>
+
+</body>
+</html>
