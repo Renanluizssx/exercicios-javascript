@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:50%;
+            text-align:center;
+            display:flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    
+
+    
+    <script>
+            
+            let media = 0;
+            let res = document.getElementById('texto')
+            let nota1 = Number(window.prompt('digite sua primeira nota'))
+            let nota2 = Number(window.prompt('digite sua segunda nota'))
+
+            media = (nota1+nota2)/2
+
+            if (media==10) {
+                res.value = `O aluno está aprovado com distinção`
+            }
+
+            else if (media>=7) {
+                res.value = `O aluno está aprovado`
+            }
+            else {
+                res.value = `O aluno está reprovado`
+            }
+    
+    </script>
+</body>
+</html>

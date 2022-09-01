@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:50%;
+            text-align:center;
+            display:flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    
+
+    
+    <script>
+            let maior = 0;
+            let menor = 0;
+            let res = document.getElementById('texto')
+            for(let c = 1; c<=3; c++) {
+               let texto = Number(window.prompt('digite idade'))
+            if (texto>18) {
+                    maior++
+
+            }
+            else {
+                menor++
+            }
+            
+
+            }
+           res.value = `Possui ${menor} menores de idade e possui ${maior} maiores de idade`
+
+
+
+    </script>
+</body>
+</html>
