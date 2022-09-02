@@ -39,6 +39,10 @@
             let nota2 = Number(window.prompt('digite sua segunda nota'))
 
             media = (nota1+nota2)/2
+            if (nota1 > 10 || nota2 > 10) {
+                res.value = `Você só pode digitar valores até 10`
+            }
+            else {
 
             if (media==10) {
                 res.value = `O aluno está aprovado com distinção`
@@ -50,7 +54,7 @@
             else {
                 res.value = `O aluno está reprovado`
             }
-    
+        }
     </script>
 </body>
 </html>
