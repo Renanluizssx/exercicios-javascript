@@ -37,7 +37,7 @@
         array.push(texto)
     }
 
-    res.value = `Os array são ${array.sort()}`
+    res.value = `Os array são ${array.sort((texto, ordem) => texto - ordem)}`
     </script>
 </body>
 </html>
