@@ -27,8 +27,8 @@
     </style>
 </head>
 <body>
-     <input type="text" name="texto" id="texto">
-    <button onclick="divisor()">Calcular</button>
+      <input type="text" name="texto" id="texto">
+    <button onclick="base()">Calcular</button>
     
 
    
@@ -36,17 +36,15 @@
 
 </html>
 <script>
-    function divisor() {
+        function base(){
         let texto = document.getElementById('texto')
-        let n1 = Number(window.prompt('digite o primeiro número'))
-        let n2 = Number(window.prompt('digite outro número'))    
-        let divisor
-        while(n2 == 0) {
-            window.alert('você não pode digitar o número 0 no divisor, tente novamente')
-            n2 = window.prompt('digite o número do divisor novamente')
-        }
-        divisor = n1/n2
-        texto.value = `A divisão entre ${n1} e ${n2} vai ser ${divisor}`
+        let base = Number(window.prompt('digite a base'))
+        let altura = Number(window.prompt('digite a altura'))
+
+        let area = base*altura
+        let perimetro = (2*base) + (2*altura)
+        
+        texto.value = `Calculando a área ficou ${area} e o perímetro ficou ${perimetro}`
     }
 </script>
     

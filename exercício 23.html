@@ -27,8 +27,8 @@
     </style>
 </head>
 <body>
-     <input type="text" name="texto" id="texto">
-    <button onclick="divisor()">Calcular</button>
+      <input type="text" name="texto" id="texto">
+    <button onclick="positivo()">Calcular</button>
     
 
    
@@ -36,18 +36,16 @@
 
 </html>
 <script>
-    function divisor() {
+    function positivo() {
         let texto = document.getElementById('texto')
-        let n1 = Number(window.prompt('digite o primeiro número'))
-        let n2 = Number(window.prompt('digite outro número'))    
-        let divisor
-        while(n2 == 0) {
-            window.alert('você não pode digitar o número 0 no divisor, tente novamente')
-            n2 = window.prompt('digite o número do divisor novamente')
+        numero = Number(window.prompt('digite um número'))
+        if (numero<0) {
+            res.value = `O número é negativo`
         }
-        divisor = n1/n2
-        texto.value = `A divisão entre ${n1} e ${n2} vai ser ${divisor}`
-    }
+        else {
+            res.value = `O número é positivo`
+        }
+    } 
 </script>
     
 

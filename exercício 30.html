@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:700px;
+            text-align:center;
+            display:flex;
+            height:25px;
+            
+        }
+
+    </style>
+</head>
+<body>
+      <div><input type="text" name="texto" id="texto"></div>
+    <button id="button">Calcular</button>
+    
+
+   
+</body>
+
+</html>
+<script>
+     function idade() {
+        let button = document.getElementById('button')
+        let texto = document.getElementById('texto')
+        let idadeanos = Number(window.prompt('digite sua idade em anos'))
+        let idademeses = Number(window.prompt('digite sua idade em meses'))
+        let idadedias = Number(window.prompt('digite sua idade em dias'))
+
+        totaldias = idadedias + (idadeanos*365) + (idademeses*30)
+
+        texto.value = `sua idade em dias é ${idadedias} e sua idade em anos é ${idadeanos} e a sua idade em meses é ${idademeses} totalizando seus dias vividos são ${totaldias}`
+
+        
+     }
+     button.addEventListener('click', idade)
+</script>
+    

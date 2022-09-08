@@ -27,8 +27,8 @@
     </style>
 </head>
 <body>
-     <input type="text" name="texto" id="texto">
-    <button onclick="divisor()">Calcular</button>
+      <input type="text" name="texto" id="texto">
+    <button onclick="conversor()">Calcular</button>
     
 
    
@@ -36,18 +36,13 @@
 
 </html>
 <script>
-    function divisor() {
-        let texto = document.getElementById('texto')
-        let n1 = Number(window.prompt('digite o primeiro número'))
-        let n2 = Number(window.prompt('digite outro número'))    
-        let divisor
-        while(n2 == 0) {
-            window.alert('você não pode digitar o número 0 no divisor, tente novamente')
-            n2 = window.prompt('digite o número do divisor novamente')
-        }
-        divisor = n1/n2
-        texto.value = `A divisão entre ${n1} e ${n2} vai ser ${divisor}`
-    }
+    function conversor(){
+    let texto = document.getElementById('texto')
+    let velocidadems = Number(window.prompt('digite a sua velocidade em m/s'))
+    let velocidadekmh = velocidadems*3.6
+
+    texto.value = `Sua velocidade em km/h é ${velocidadekmh}`
+}
 </script>
     
 

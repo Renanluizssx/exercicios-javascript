@@ -28,7 +28,7 @@
 </head>
 <body>
       <input type="text" name="texto" id="texto">
-    <button onclick="divisor()">Calcular</button>
+    <button id="button">Calcular</button>
     
 
    
@@ -36,25 +36,23 @@
 
 </html>
 <script>
-    function divisor(){
-    let texto = document.getElementById('texto')
-    let soma = 0
-    n1 = Number(window.prompt('digite um número'));
-    n2 = Number(window.prompt('digite outro número que será dividido'))
+       
+        // função só vai executar quando eu chamar ela
+        function triangulo() {
+        
+            let texto = document.getElementById('texto')
+        let button = document.getElementById('button')
 
-    for(let c = 1; c<=100; c++){
-    if (n2 == 0) {
-        window.alert('valor inválido, tente novamente')
-        n2 = window.prompt('digite o valor do divisor')
+        lado1 = Number(window.prompt('digite o primeiro lado'))
+        lado2 = Number(window.prompt('digite o segundo lado'))
+        lado3 = Number(window.prompt('digite o terceiro lado'))
+
+        perimetro = lado1+lado2+lado3
+
+        texto.value = `O perímetro do triângulo fica ${perimetro}`
+        
     }
-    else {
-        soma = n1/n2
-        texto.value = `A divisão entre ${n1} e ${n2} é ${soma}`
-        c = 101
-    }
-}
-}
+    button.addEventListener('click', triangulo)
+    
 </script>
     
-
-        

@@ -35,12 +35,13 @@
         // n1 = 10 n2 = 5 
           let n1 = window.prompt('digite um numero')
           let n2 = window.prompt('digite outro numero')
-
+        let auxiliar = 0
           window.alert(`O número que você digitou foi ${n1} e ${n2}`)
-        
+        auxiliar = n1
+        n1 = n2
+        n2 = auxiliar
 
-          window.alert(`Agora invertendo os valores fica ${n1} e ${n2}`)
-            
+          window.alert(`O número invertido ficou ${n1} e ${n2}`)
     </script>
 </body>
 </html>

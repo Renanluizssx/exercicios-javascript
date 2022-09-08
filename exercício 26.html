@@ -27,8 +27,8 @@
     </style>
 </head>
 <body>
-     <input type="text" name="texto" id="texto">
-    <button onclick="divisor()">Calcular</button>
+      <input type="text" name="texto" id="texto">
+    <button onclick="altura()">Calcular</button>
     
 
    
@@ -36,17 +36,14 @@
 
 </html>
 <script>
-    function divisor() {
+    function altura() {
         let texto = document.getElementById('texto')
-        let n1 = Number(window.prompt('digite o primeiro número'))
-        let n2 = Number(window.prompt('digite outro número'))    
-        let divisor
-        while(n2 == 0) {
-            window.alert('você não pode digitar o número 0 no divisor, tente novamente')
-            n2 = window.prompt('digite o número do divisor novamente')
-        }
-        divisor = n1/n2
-        texto.value = `A divisão entre ${n1} e ${n2} vai ser ${divisor}`
+        let quadrado = Number(window.prompt('digite o lado do quadrado'))
+        
+        let altura = Math.pow(quadrado, 2)
+        let perimetro = quadrado + quadrado + quadrado + quadrado
+
+        texto.value = `A altura do quadrado ficou ${altura} e o perímetro ficou ${perimetro}`
     }
 </script>
     

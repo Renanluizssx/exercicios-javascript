@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            
+            display:flex;
+            flex-direction:column;
+           
+            
+
+        }
+        
+        input {
+            width:200px;
+            display:flex;
+            
+        }
+        
+        button {
+            width:200px;
+        }
+        input.resultado {
+            margin-top:35px;
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+        <label> Digite o número 1
+      <input type="text" name="texto" id="texto1">
+        </label>
+      <label> Digite o número 2
+        <input type="text" name="texto" id="texto2">
+    </label>
+        <label> Digite o número 3
+    <input type="text" name="texto" id="texto3">
+        </label>
+        <input class="resultado" type="text" name="texto" id="resultado">
+    <button onclick="maior()">Calcular</button>
+
+
+    
+
+   
+</body>
+
+</html>
+<script>
+   function maior() {
+   let texto1 = document.getElementById('texto1')
+   let texto2 = document.getElementById('texto2')
+   let texto3 = document.getElementById('texto3')
+    let maior = document.getElementById('resultado')
+   
+
+
+        
+        if (texto1.value > texto2.value && texto3.value) {
+            
+            maior.value = `O maior número é ${texto1.value}`
+        }
+    
+        else if(texto2.value > texto1.value && texto3.value) {
+            
+            maior.value = `O maior número é ${texto2.value}`
+        }
+        else if(texto3.value > texto1.value && texto2.value) {
+            
+            maior.value = `O maior número é ${texto3.value}`
+        }
+        else {
+            maior.value = `valor inválido ou os número são repetidos`
+        }
+
+    }
+</script>
+    
+
+        
