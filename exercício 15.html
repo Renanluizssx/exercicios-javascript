@@ -12,6 +12,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+           
             
 
         }
@@ -27,24 +28,19 @@
 </head>
 <body>
     <input type="text" name="texto" id="texto">
+    <button onclick="calcular()">Calcular</button>
     
 
     
     <script>
-    let media = 0
-     let res = document.getElementById('texto')
-     let nota1 = Number(window.prompt('digite a nota 1'))
-     let nota2 = Number(window.prompt('digite a nota 2'))
-    
-     if (nota1 > 10 || nota2 > 10) {
-        res.value = "Você digitou um número maior que 10, tente novamente"
-     }
-     else {
-        media = (nota1+nota2)/2
-        res.value = `A média do aluno foi ${media}`
-     }
-
-
+            function calcular() {
+            let res = document.getElementById('texto');
+            let dinheiro = window.prompt('digite quanto de dinheiro você possui');
+            let combustivel = dinheiro/5;
+            let kilometragem = combustivel;
+            res.value = `Você possui ${dinheiro} e você pode comprar ${combustivel} e com isso você andará ${kilometragem}`;
+        }
+            
     </script>
 </body>
 </html>

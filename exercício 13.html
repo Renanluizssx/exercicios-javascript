@@ -12,6 +12,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+           
             
 
         }
@@ -27,24 +28,20 @@
 </head>
 <body>
     <input type="text" name="texto" id="texto">
+    <button onclick="conversor()">Calcular</button>
     
 
     
     <script>
-    let media = 0
-     let res = document.getElementById('texto')
-     let nota1 = Number(window.prompt('digite a nota 1'))
-     let nota2 = Number(window.prompt('digite a nota 2'))
-    
-     if (nota1 > 10 || nota2 > 10) {
-        res.value = "Você digitou um número maior que 10, tente novamente"
-     }
-     else {
-        media = (nota1+nota2)/2
-        res.value = `A média do aluno foi ${media}`
-     }
-
-
+            function conversor() {
+            let res = document.getElementById('texto');
+            let fahrenheit = Number(window.prompt('digite o valor graus'));
+            let grauscelsius = (fahrenheit - 32)/1.8;
+             // método não continua na variável?
+            res.value = `O valor em fahrenheit foi dado em ${fahrenheit}. E o valor convertido em grauscelsius foi ${grauscelsius.toFixed()}`;            
+            
+        }
+        
     </script>
 </body>
 </html>

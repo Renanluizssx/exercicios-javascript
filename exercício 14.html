@@ -12,6 +12,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+           
             
 
         }
@@ -27,24 +28,24 @@
 </head>
 <body>
     <input type="text" name="texto" id="texto">
+    <button onclick="exponenciação()">Calcular</button>
     
 
     
     <script>
-    let media = 0
-     let res = document.getElementById('texto')
-     let nota1 = Number(window.prompt('digite a nota 1'))
-     let nota2 = Number(window.prompt('digite a nota 2'))
-    
-     if (nota1 > 10 || nota2 > 10) {
-        res.value = "Você digitou um número maior que 10, tente novamente"
-     }
-     else {
-        media = (nota1+nota2)/2
-        res.value = `A média do aluno foi ${media}`
-     }
-
-
+            let exp = []
+            function exponenciação() {
+                let res = document.getElementById('texto')
+                for (let c=1; c<=6; c++){
+           
+            let numero = Number(window.prompt('digite um numero'))
+            exp.push(numero)
+            
+            
+        }
+        res.value = ` os números que você digitou foram: ${exp}. Ao quadrado fica ${Math.pow(exp, 2)}`
+        }
+        
     </script>
 </body>
 </html>

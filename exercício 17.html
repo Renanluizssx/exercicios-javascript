@@ -12,6 +12,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+           
             
 
         }
@@ -27,24 +28,26 @@
 </head>
 <body>
     <input type="text" name="texto" id="texto">
+    <button onclick="imparpar()">Calcular</button>
     
 
     
     <script>
-    let media = 0
-     let res = document.getElementById('texto')
-     let nota1 = Number(window.prompt('digite a nota 1'))
-     let nota2 = Number(window.prompt('digite a nota 2'))
-    
-     if (nota1 > 10 || nota2 > 10) {
-        res.value = "Você digitou um número maior que 10, tente novamente"
-     }
-     else {
-        media = (nota1+nota2)/2
-        res.value = `A média do aluno foi ${media}`
-     }
+          function imparpar() {
+                let texto = document.getElementById('texto')
+                let numero = Number(window.prompt('digite um número'))
 
-
+                function retorna(valor) {
+                    impar = valor%2
+                    if (impar == 0) {
+                        return "o número é par"
+                    }
+                    else {
+                        return "o número é impar"
+                    }
+                }
+                texto.value = `${retorna(numero)}`
+          }
     </script>
 </body>
 </html>

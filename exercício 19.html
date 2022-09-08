@@ -12,6 +12,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+           
             
 
         }
@@ -26,25 +27,25 @@
     </style>
 </head>
 <body>
-    <input type="text" name="texto" id="texto">
+    <button onclick="antecessor()">Calcular</button>
     
 
-    
-    <script>
-    let media = 0
-     let res = document.getElementById('texto')
-     let nota1 = Number(window.prompt('digite a nota 1'))
-     let nota2 = Number(window.prompt('digite a nota 2'))
-    
-     if (nota1 > 10 || nota2 > 10) {
-        res.value = "Você digitou um número maior que 10, tente novamente"
-     }
-     else {
-        media = (nota1+nota2)/2
-        res.value = `A média do aluno foi ${media}`
-     }
-
-
-    </script>
+   
 </body>
+
 </html>
+<script>
+    function antecessor() {
+      let texto = document.getElementById('texto')
+      numero = Number(window.prompt('digite um número'))
+      function valornumero(valor) {
+          window.alert(`O valor que você digitou foi ${valor}`)
+          let valornovo = valor - 1
+          window.alert(`O valor antecessor será ${valornovo}`)
+      }
+      document.write(valornumero(numero))
+    }
+</script>
+    
+
+        

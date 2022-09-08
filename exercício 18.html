@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:50%;
+            text-align:center;
+            display:flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    <button onclick="primo()">Calcular</button>
+    
+
+    
+    <script>
+          function primo() {
+               let texto = document.getElementById('texto')
+            let numeros = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 
+                31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 
+                89, 97, 101, 103, 107, 109]
+                let primo = Number(window.prompt('digite um número de 1 a 100'))
+
+                if (numeros.indexOf(primo) !== -1) {
+                    texto.value = `O número que você escolheu foi ${primo} e ele é um número primo`
+                }
+                else {
+                    texto.value = `O número que você escolheu foi ${primo} e ele não é primo`
+                }
+
+          }
+    </script>
+</body>
+</html>

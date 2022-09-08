@@ -12,6 +12,7 @@
             display:flex;
             align-items:center;
             justify-content:center;
+           
             
 
         }
@@ -27,24 +28,23 @@
 </head>
 <body>
     <input type="text" name="texto" id="texto">
+    <button onclick="vogal()">Calcular</button>
     
 
     
     <script>
-    let media = 0
-     let res = document.getElementById('texto')
-     let nota1 = Number(window.prompt('digite a nota 1'))
-     let nota2 = Number(window.prompt('digite a nota 2'))
-    
-     if (nota1 > 10 || nota2 > 10) {
-        res.value = "Você digitou um número maior que 10, tente novamente"
-     }
-     else {
-        media = (nota1+nota2)/2
-        res.value = `A média do aluno foi ${media}`
-     }
-
-
+           function vogal() {
+           let vogal = ["a", "e", "i", "o", "u"];
+            let res = document.getElementById('texto');
+            let letra = window.prompt('digite uma letra');
+            if (vogal.indexOf(letra) != -1) {
+                res.value = `A letra que você digitou foi ${letra} e ela é uma vogal`;
+            }
+            else {
+                res.value = `A letra que você digitou foi uma consoante`;
+            }
+        }
+            
     </script>
 </body>
 </html>
