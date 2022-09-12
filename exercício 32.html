@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:700px;
+            text-align:center;
+            display:flex;
+           
+        }
+
+    </style>
+</head>
+<body>
+      
+    <button id="button">Calcular</button>
+    
+
+   
+</body>
+
+</html>
+<script>
+   function numeroextenso(){
+   let listn = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                    12, 13, 14, 15, 16, 17, 18, 19, 20]
+    let texto = document.getElementById('texto')
+    let button = document.getElementById('button')
+    numero = Number(window.prompt('digite um número'))
+    for(let c =3; c>1;){
+    if (listn.indexOf(numero)!== -1) {
+        window.alert(`O número que você digitou foi ${numero} e está entre 1 e 20`)
+        c = 0
+    }
+    else {
+        c--
+        window.alert(`se errar mais ${c} o programa encerrará`)
+        numero = Number(window.prompt(`O número que você digitou não está entre 1 e 20, tente novamente`))
+        
+    }
+}
+
+   }
+
+button.addEventListener('click', numeroextenso)
+</script>
+    

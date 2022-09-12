@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:1400px;
+            text-align:center;
+            display:flex;
+            height:40px;
+            font-size:25px;
+        }
+
+    </style>
+</head>
+<body>
+      <input type="text" name="texto" id="texto">
+      
+    <button id="button">Calcular</button>
+    
+
+   
+</body>
+
+</html>
+<script>
+    function somar() {
+        let soma = 0;
+        let texto = document.getElementById('texto')
+        let button = document.getElementById('button')
+// primeiro 10 segundo 5 terceiro 11
+        numero1 = Number(window.prompt('digite o primeiro número'))
+        numero2 = Number(window.prompt('digite o segundo número'))
+        numero3 = Number(window.prompt('digite o terceiro número'))
+        //ler dois números e ver se são iguais
+        //condição não funciona
+        if (numero1 && numero2 > numero3) {
+                soma = numero1+numero2
+            texto.value = `A soma entre ${numero1} e ${numero2} é ${soma}`
+        }   
+        else if (numero2 && numero3 > numero1) {
+            soma = numero2+numero3
+            texto.value = `A soma entre ${numero2} e ${numero3} é ${soma}`
+        }
+        else if (numero1 && numero3 > numero2) {
+            soma = numero1+numero3
+            texto.value = `A soma entre ${numero1} e ${numero3} é ${soma}`
+        }
+        else {
+            texto.value = `Valor inválido ou você digitou números iguais`
+        }
+    }
+    button.addEventListener('click', somar)
+</script>
+    

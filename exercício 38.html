@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:700px;
+            text-align:center;
+            display:flex;
+            
+           
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    <button id="button">Clique aqui</button>
+<div class="container">
+    
+</div>
+
+</body>
+
+</html>
+<script>
+        function calcular() {
+        let texto = document.getElementById('texto')
+        let button = document.getElementById('button')
+        let valorseno = Number(window.prompt('digite p angulo do seno'))
+        let valorcosseno = Number(window.prompt('digite o angulo do cosseno'))
+        let valortangente = Number(window.prompt('digite o angulo da tangente'))
+
+        seno = Math.sin(valorseno)
+        cosseno = Math.cos(valorcosseno)
+        tangente = Math.tan(valortangente)
+
+
+        texto.value = `O valor do seno é ${seno.toFixed(2)} valor do cosseno é ${cosseno.toFixed(2)} valor da tangente é ${tangente.toFixed(2)}`
+    }
+
+    button.addEventListener('click', calcular)
+</script>

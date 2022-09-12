@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+            body {
+            background-color:black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+           
+            
+
+        }
+        
+        input {
+            width:700px;
+            text-align:center;
+            display:flex;
+            
+           
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    <button id="button">Clique aqui</button>
+<div class="container">
+</div>
+
+</body>
+
+</html>
+<script>
+        let texto = document.getElementById('texto')
+        let button = document.getElementById('button')
+        numero1 = Number(window.prompt('digite um número'))
+        numero2 = Number(window.prompt('digite o segundo número'))
+        // condição não funciona
+        if (numero1.value>numero2.value) {
+            texto.value = `O número ${numero1} que você digitou é maior que o ${numero2}}`
+        }
+        else if (numero2.value>numero1.value) {
+            texto.value = `O número ${numero2} que você digitou é maior que o ${numero1}`
+        }
+        else {
+            texto.value = `Erro! O número é igual ou está vazio`
+        }
+</script>
