@@ -41,18 +41,25 @@
 </html>
 <script>
     function tabuada(){
-    // não conseguir esvaziar a variável
+    
+       
+    let calculo = 0;
     let button = document.getElementById('texto')
     let select = document.getElementById('select')
-    let number = window.prompt('digite um número')
+    let number = Number(window.prompt('digite um número'))
+    select.innerHTML = ``;
+        
     for(let c = 0; c<=10; c++) {
         let option = document.createElement('option')
-        select.appendChild(option)       
-        let calculo = number*c
-        option.text = ""
-        option.text = `A tabuada de ${number} x ${c} = ${calculo}`
+        select.appendChild(option) 
+         calculo = number*c
+        tabu = `A tabada de ${number} x ${c} = ${calculo}`
+        option.innerHTML = tabu;
+        
+    
+        
 
     }
-}
+    }
 button.addEventListener('click', tabuada) 
 </script>

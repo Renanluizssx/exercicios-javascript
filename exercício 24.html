@@ -33,15 +33,15 @@
 </head>
 <body>
         <label> Digite o número 1
-      <input type="text" name="texto" id="texto1">
+      <input type="number" name="texto" id="texto1">
         </label>
       <label> Digite o número 2
-        <input type="text" name="texto" id="texto2">
+        <input type="number" name="texto" id="texto2">
     </label>
         <label> Digite o número 3
-    <input type="text" name="texto" id="texto3">
+    <input type="number" name="texto" id="texto3">
         </label>
-        <input class="resultado" type="text" name="texto" id="resultado">
+        <input class="resultado" type="number" name="texto" id="resultado">
     <button onclick="maior()">Calcular</button>
 
 
@@ -53,26 +53,26 @@
 </html>
 <script>
    function maior() {
-   let texto1 = document.getElementById('texto1')
-   let texto2 = document.getElementById('texto2')
-   let texto3 = document.getElementById('texto3')
+   let numero1 = document.getElementById('texto1')
+   let numero2 =document.getElementById('texto2')
+   let numero3 = document.getElementById('texto3')
     let maior = document.getElementById('resultado')
    
 
 
-        // condição não funciona
-        if (texto1.value > texto2.value && texto3.value) {
+        //erro 
+        if(numero1.value> numero2.value && numero1.value> numero3.value)  {
             
-            maior.value = `O maior número é ${texto1.value}`
+            maior.value = `O maior número é ${numero1.value}`
         }
     
-        else if(texto2.value > texto1.value && texto3.value) {
+        else if(numero2.value>numero3.value && numero2.value>numero1.value) {
             
-            maior.value = `O maior número é ${texto2.value}`
+            maior.value = `O maior número é ${numero2.value}`
         }
-        else if(texto3.value > texto1.value && texto2.value) {
+        else if(numero3.value>numero1.value&&numero2.value>numero1.value) {
             
-            maior.value = `O maior número é ${texto3.value}`
+            maior.value = `O maior número é ${numero3.value}`
         }
         else {
             maior.value = `valor inválido ou os número são repetidos`

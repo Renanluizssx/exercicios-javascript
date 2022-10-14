@@ -37,18 +37,22 @@
 
 </html>
 <script>
+        function maior() {
         let texto = document.getElementById('texto')
         let button = document.getElementById('button')
         numero1 = Number(window.prompt('digite um número'))
         numero2 = Number(window.prompt('digite o segundo número'))
-        // condição não funciona
-        if (numero1.value>numero2.value) {
-            texto.value = `O número ${numero1} que você digitou é maior que o ${numero2}}`
+       
+        if (numero1>numero2) {
+            texto.value = `O número ${numero1} que você digitou é maior que o ${numero2}`
         }
-        else if (numero2.value>numero1.value) {
+        else if (numero2>numero1) {
             texto.value = `O número ${numero2} que você digitou é maior que o ${numero1}`
         }
         else {
             texto.value = `Erro! O número é igual ou está vazio`
         }
+       
+    }
+    button.addEventListener('click', maior)
 </script>

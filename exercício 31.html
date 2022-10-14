@@ -12,18 +12,16 @@
             display:flex;
             align-items:center;
             justify-content:center;
+            
            
             
 
         }
-        
         input {
-            width:1400px;
-            text-align:center;
-            display:flex;
-            height:40px;
-            font-size:25px;
+            width:50%;
         }
+        
+    
 
     </style>
 </head>
@@ -47,16 +45,15 @@
         numero2 = Number(window.prompt('digite o segundo número'))
         numero3 = Number(window.prompt('digite o terceiro número'))
         //ler dois números e ver se são iguais
-        //condição não funciona
-        if (numero1 && numero2 > numero3) {
+        if (numero1>numero3 && numero2>numero3) {
                 soma = numero1+numero2
             texto.value = `A soma entre ${numero1} e ${numero2} é ${soma}`
         }   
-        else if (numero2 && numero3 > numero1) {
+        else if (numero2>numero1 && numero3>numero1) {
             soma = numero2+numero3
             texto.value = `A soma entre ${numero2} e ${numero3} é ${soma}`
         }
-        else if (numero1 && numero3 > numero2) {
+        else if (numero1> numero2 && numero3>numero2) {
             soma = numero1+numero3
             texto.value = `A soma entre ${numero1} e ${numero3} é ${soma}`
         }
